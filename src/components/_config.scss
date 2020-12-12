@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,900;1,400;1,900&display=swap');
+
+$darkYellow-color: #FDDD5C;
+$darkerYellow-color: #ffcc00;
+$blue-color: #007BC9;
+$blueLight-color: #f6f8fa;
+$green-color: #00471b;
+$lightGreen-color: #EEF2EA;
+$red-color: #ff6666;
+
+
+$faintGray-color: #EDEDF4;
+$darkerGray-color: #B1B2CE;
+$darkestGray-color: #9697B8;
+$pink-color: #F8B9DA;
+$darkPink-color: #F34490;
+
+$box-shadow: 0 1px 15px -5px rgb(32, 32, 32);
+$landing-width: 70vw;
+
+@mixin flex($align, $justify, $direction) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin main-font($size, $weight, $color) {
+    font-family: 'Catamaran', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin minor-font($size, $weight, $color) {
+    font-family: 'Merriweather', serif;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+

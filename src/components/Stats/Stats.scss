@@ -1,0 +1,8 @@
+@import '../config';
+
+.stats-container {
+    @include flex(center, center, row);
+    height: 100vh;
+    width: 100vw;
+    
+}

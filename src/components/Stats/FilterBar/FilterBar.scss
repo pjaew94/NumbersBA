@@ -1,0 +1,144 @@
+@import "../../config";
+
+.filter-bar-container {
+    @include flex(flex-start, flex-start, column);
+    height: 100%;
+    width: 15%;
+    box-shadow: 0px 1px 15px -10px black;
+
+    .logo-container {
+        @include flex(center, center, row);
+        height: 8%;
+        width: 100%;
+        border-bottom: 2px solid $faintGray-color;
+
+        .logo-inner {
+            @include flex(flex-end, center, row);
+            img {
+                height: 2rem;
+                width: auto;
+            
+              
+            }
+
+            h2 {
+                @include flex(flex-end, flex-end, row);
+                @include main-font(1.2rem, 900, rgb(59, 59, 59));
+                transform: translate(-5px, 10px);
+                font-style: italic;
+            }
+        }
+    }
+
+    .filter-container {
+        @include flex(center, flex-start, column);
+        height: auto;
+        width: 100%;
+        padding: 10%;
+
+        .input-field-container {
+            @include flex(center, center, row);
+            width: 100%;
+            border-radius: 20px;
+            padding: 5px 10px;
+            background: $faintGray-color;
+            margin-bottom: 25px;
+
+            .search-icon {
+                margin-right: 10px;
+                font-size: 1.2rem;
+                color: $darkestGray-color;
+            }
+
+            .input-field {
+                @include main-font(0.8rem, 400, $darkestGray-color);
+                border: none;
+                padding: 2px;
+                height: 2rem;
+
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .toggler-container {
+        @include flex(center, center, row);
+        width: 90%;
+        height: 30px;
+        margin-bottom: 25px;
+        position: relative;
+
+        h3 {
+            position: absolute;
+            @include main-font(0.9rem, 400, $darkestGray-color);
+            border-radius: 5px;
+            transition: 0.3s all ease-in;
+        }
+
+        .option-1 {
+            @include flex(center, center, row);
+            left: 0;
+        }
+
+        .option-2 {
+            @include flex(center, center, row);
+            right: 0;
+        }
+
+        .highlight {
+            color: $pink-color;
+
+        }
+
+        .toggler {
+            width: 60px;
+            height: 100%;
+            background: $pink-color;
+            border-radius: 30px;
+            padding: 2px;
+            transition: 0.2s all ease-in-out;
+            cursor: pointer;
+            
+
+            .circle {
+                
+                height: 26px;
+                width: 26px;
+                background: white;
+                box-shadow: 0px 1px 15px -5px black;
+                z-index: 2;
+                border-radius: 50%;
+                transition: 0.2s all ease-in-out;
+            }
+            .toggled {
+                transform: translateX(115%);
+            }
+        }
+
+
+
+    }
+ 
+    .selector-container {
+        @include flex(center, space-between, row);
+        width: 90%;
+
+        h3 {
+            @include main-font(0.9rem, 700, $darkestGray-color);
+        }
+
+        select {
+            @include flex(center, space-between, row);
+            width: 55%;
+            border: none;
+            @include main-font(0.9, 700, $darkestGray-color);
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
